@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //1.求1-100之间所有数的平均值
+        var sum = 0;
+        var pingjun = 0;
+        for (var i = 0;i <= 100;i++){
+            sum +=i;
+            pingjun = sum/i;
+        }
+        console.log(pingjun);
+        var ji = 0;
+        var ou = 0;
+        //2.求1-100之间所有偶数和奇数的和
+        for (var i = 1;i <= 100;i++){
+            if (i % 2 ==0){
+                ou += i;
+            }else{
+                ji += i;
+            }
+            sum = ou + ji;
+        }
+
+        console.log(ou)
+    </script>
+</head>
+<body>
+
+</body>
+</html>

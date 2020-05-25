@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var num = prompt('输入班级人数');
+        var sum = 0;
+        var average = 0;
+        for (var i = 1;i <= num;i++){
+            var score = prompt('输入第'+i+'个学生的成绩');
+            console.log(score);
+            sum += parseInt(score);
+        }
+        average = sum/num;
+        console.log('总分:'+sum+'分');
+        console.log('平均分:'+average+'分');
+    </script>
+</head>
+<body>
+
+</body>
+</html>
