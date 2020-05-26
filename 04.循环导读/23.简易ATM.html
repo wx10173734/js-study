@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var money = 0;
+        var nowmoney = 0;
+        var step = prompt('请输入您要的操作\n1.存钱\n' +
+            '2.取钱\n3.显示余额\n4.退出');
+        function step1() {
+            prompt('请输入您要的操作\n1.存钱\n' +
+                '2.取钱\n3.显示余额\n4.退出');
+
+        }
+
+        // switch (parseInt(step)) {
+        //     case 1:
+        //         var cunmoney = prompt('请您输入存的钱数:')
+        //         nowmoney = money+parseInt(cunmoney);
+        //         alert('您现在的钱数是:'+nowmoney);
+        //         step = prompt('请输入您要的操作\n1.存钱\n' +
+        //             '2.取钱\n3.显示余额\n4.退出');
+        //     case 2:
+        //         var nowmoney2 = nowmoney;
+        //         console.log(nowmoney2);
+        //         var qumoney = prompt('请您输入取的钱数:')
+        //         nowmoney = nowmoney2-parseInt(qumoney);
+        //         alert('您现在的钱数是:'+nowmoney);
+        //         step = prompt('请输入您要的操作\n1.存钱\n' +
+        //             '2.取钱\n3.显示余额\n4.退出');
+        //     case 3:
+        //         alert('您现在的钱数是:'+nowmoney);
+        //         step = prompt('请输入您要的操作\n1.存钱\n' +
+        //             '2.取钱\n3.显示余额\n4.退出');
+        //     case 4:
+        //         alert('您正在退出');
+        //         break;
+        //     default:
+        //
+        // }
+
+            switch (parseInt(step)) {
+                case 1:
+                    var cunmoney = prompt('请您输入存的钱数:')
+                    nowmoney = money+parseInt(cunmoney);
+                    alert('您现在的钱数是:'+nowmoney);
+                    step1();
+                    // break;
+                case 2:
+                    // var nowmoney2 = nowmoney;
+                    var qumoney = prompt('请您输入取的钱数:')
+                    nowmoney = nowmoney-parseInt(qumoney);
+                    alert('您现在的钱数是:'+nowmoney);
+                    step1();
+                    // break;
+                case 3:
+                    alert('您现在的钱数是:'+nowmoney);
+                    step1();
+                    break;
+                default:
+                    break;
+
+            }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
