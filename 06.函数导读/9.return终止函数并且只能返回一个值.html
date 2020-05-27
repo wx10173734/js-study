@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //函数返回值注意事项
+        //1.return 终止函数
+        function getSum(num1, num2) {
+            return num1 + num2;//return 后面的代码不会被执行啊
+            alert('我是不会被执行的哦');
+        }
+
+        console.log(getSum(1, 2))
+
+        function fn(num1, num2) {
+            return num1, num2;//返回的结果是最后一个值
+
+        }
+
+        console.log(fn(1, 2));
+
+        //3.求任意两个数的 加减乘除结果
+        function getResult(num1,num2) {
+            return [num1+num2,num1-num2,num1*num2,num1/num2];
+
+        }
+        var re = getResult(10,3);
+        console.log(re);
+        // console.log(getResult(10,3));//返回的是一个数组
+    </script>
+</head>
+<body>
+
+</body>
+</html>

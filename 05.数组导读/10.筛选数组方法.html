@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //方法1
+        var arr = [2,0,6,1,77,0,52,0,255,7];
+        var str = [];
+        var j = 0;
+        for (var i = 0 ;i < arr.length;i++){
+            if (arr[i] >= 10){
+                //新数组索引号应该从0开始 依次递增
+                str[j] = arr[i];
+                j++;
+            }
+        }
+        console.log(str);
+
+        //方法2
+        var arr = [2,0,6,1,77,0,52,0,255,7];
+        var str = [];
+        //刚开始str.length 就是0
+        for (var i = 0 ;i < arr.length;i++){
+            if (arr[i] >= 10){
+                //新数组索引号应该从0开始 依次递增
+                str[str.length] = arr[i];
+                j++;
+            }
+        }
+        console.log(str);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
