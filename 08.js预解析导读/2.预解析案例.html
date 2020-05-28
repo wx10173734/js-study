@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //案例1
+        var num = 10;
+        fun();
+
+        function fun() {
+            console.log(num);
+            var num = 20;
+        }
+
+        //相当于执行了以下操作;
+        var num;
+
+        function fun() {
+            var num;
+            console.log(num);
+            num = 20;
+        }
+
+        num = 10;
+        fun();
+
+
+        //案例4
+        f1();
+        console.log(c);
+        console.log(b);
+        console.log(a);
+
+        function f1() {
+            var a = b = c = 9;
+            console.log(a);
+            console.log(b);
+            console.log(c);
+        }
+
+        //相当于一下代码
+        function f1() {
+            var a;
+            a = b = c = 9;
+            //相当于var a =9;b=9;c=9; b和c 直接赋值 没有var声明 当全局变量看
+            //集体声明 var a = 9,b=9,c=9;
+            console.log(a);//9
+            console.log(b);//9
+            console.log(c);//9
+        }
+        f1();
+        console.log(c);//9
+        console.log(b);//9
+        console.log(a);//undefined
+    </script>
+</head>
+<body>
+
+</body>
+</html>

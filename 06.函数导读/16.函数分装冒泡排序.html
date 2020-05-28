@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function sort(arr) {
+            var temp;
+            for (var i = 0;i<arr.length-1;i++){
+                for (var j = 0;j<arr.length-i-1;j++){
+                    if (arr[j]>arr[j+1]){
+                        temp = arr[j];
+                        arr[j] = arr[j+1];
+                        arr[j+1] = temp;
+                    }
+                }
+            }
+            return arr;
+        }
+        var newArr = [9,8,1,4,3,2,0];
+        console.log(sort(newArr));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

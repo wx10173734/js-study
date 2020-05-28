@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function getMax() {
+            for (var i = 0;i<arguments.length;i++){
+                var max = arguments[0];
+                if (arguments[i]>max){
+                    max = arguments[i];
+                }
+            }
+            return max;
+        }
+
+        console.log(getMax(3,5,1,8,10));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

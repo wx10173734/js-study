@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function getRes(num1, symbol, num2) {
+            switch (symbol) {
+                case '+':
+                    return num1 + num2;
+                    break;
+                case '-':
+                    return num1 - num2;
+                    break;
+                case '*':
+                    return num1 * num2;
+                    break;
+                case '/':
+                    return num1 / num2;
+                    break;
+                    default:
+            }
+        }
+        // alert(getRes(7,'+',6));
+
+        function getMaxt(num1,num2) {
+            if (num1 > num2){
+                return num1;
+            }else {
+                return num2;
+            }
+        }
+        function getSu(num1) {
+          var count = 0;
+          for (var i = 1;i<=num1;i++){
+              if (num1 % i == 0){
+                  count++;
+              }
+          }
+          if (count == 2){
+              return num1;
+          }else{
+              return false;
+          }
+        }
+        alert(getSu(67));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
