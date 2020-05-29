@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function Button(width,height,backgroud,fn) {
+            this.width = width;
+            this.height = height;
+            this.backgroud = backgroud;
+            this.fn = function (name) {
+                alert(name);
+            }
+        }
+        var button = new Button('100px','200px','blue');
+        // button.fn('lzc');
+        // console.log(button);
+
+        function reserve(arr) {
+            var newArr  = [];
+            for (var i = arr.length-1;i>=0;i--){
+                newArr[newArr.length] = arr[i];
+            }
+            return newArr;
+        }
+        console.log(reserve([1,2,3,4,5]));
+        
+        function sort(arr) {
+            // var newArr = [];
+            for (var i = 0;i<= arr.length-1;i++){
+                for (var j = 0;j<=arr.length-i-1;j++){
+                    if (arr[j]>arr[j+1]){
+                        temp = arr[j];
+                        arr[j] = arr[j+1];
+                        arr[j+1] = temp;
+                    }
+                }
+            }
+            return arr;
+        }
+
+        console.log(sort([4,2,3,2,1,9,7,5]));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

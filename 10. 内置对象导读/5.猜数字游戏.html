@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min; //含最大值，含最小值
+        }
+
+        //猜数字
+        while (true){ //死循环
+            var num = prompt('输入一个数字');
+            if (parseInt(num) > random){
+                alert('数字1大了继续猜');
+            }else if (parseInt(num) < random){
+                alert('数字小了继续猜');
+            }else {
+                alert('猜对了');
+                break;//退出整个循环退出程序
+            }
+        }
+
+        //要求用户猜 1-50之间的数字 但是只有10次猜的机会
+        var random = getRandom(1, 10);
+        console.log(random);
+        for (var i = 1; i <= 10; i++) {
+            var num = prompt('输入一个数字');
+            if (parseInt(num) > random) {
+                alert('数字1大了继续猜');
+            } else if (parseInt(num) < random) {
+                alert('数字小了继续猜');
+            } else {
+                alert('猜对了');
+                break;//退出整个循环退出程序
+            }
+            if (i == 10){
+                alert('次数过多了');
+                break;
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

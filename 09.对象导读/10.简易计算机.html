@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function hello() {
+            var info = prompt('欢迎使用简易计算器:\n1.加法运算;\n2.减法运算;\n3.乘法运算' +
+                '\n4.除法运算;\n5.退出\n请输入您的选项');
+        }
+        var num1,num2;
+        function num() {
+             num1 = prompt('输入一个数值');
+             num2 = prompt('输入一个数值');
+        }
+
+        function jia() {
+            num();
+            return parseInt(num1)+parseInt(num2);
+        }
+
+        function jian() {
+            num();
+            return parseInt(num1)-parseInt(num2);
+        }
+
+        function cheng() {
+            num();
+            return parseInt(num1)*parseInt(num2);
+        }
+
+        function chu() {
+            num();
+            return parseInt(num1)/parseInt(num2);
+        }
+        var info = prompt('欢迎使用简易计算器:\n1.加法运算;\n2.减法运算;\n3.乘法运算' +
+            '\n4.除法运算;\n5.退出\n请输入您的选项');
+            switch (parseInt(info)) {
+                case 1 :
+                    alert(jia());
+                    hello();
+
+                case 2:
+                    alert(jian());
+                    hello();
+
+                case 3:
+                    alert(cheng());
+                    hello();
+
+                case 4:
+                    alert(chu());
+                    hello();
+
+                default:
+                    break;
+            }
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

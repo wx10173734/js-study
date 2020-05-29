@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //格式化 日期时分秒
+        var date = new Date();
+        console.log(date.getHours());
+        console.log(date.getMinutes());
+        console.log(date.getSeconds());
+        //要求封装一个函数返回当前时分秒 格式08:08:08
+        function getTime() {
+            var time = new Date();
+            var hour = time.getHours();
+            hour = hour < 10 ? '0'+hour : hour;
+            var minute = time.getMinutes();
+            minute = minute < 10 ? '0'+minute : minute;
+            var second = time.getSeconds();
+            second = second < 10 ? '0'+second : second;
+            return hour+":"+minute+':'+second;
+        }
+
+        console.log(getTime());
+    </script>
+</head>
+<body>
+
+</body>
+</html>

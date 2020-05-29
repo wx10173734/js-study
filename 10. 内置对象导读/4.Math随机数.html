@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //1.Math对象随机数方法 random()返回一个随机的小数 0<=x<1
+        //2.这个方法不跟参数
+        //3.代码验证
+        console.log(Math.random());
+        //4.想要两个数之间的随机整数 并且包含这2个帧数
+        function getRandom(min,max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min; //含最大值，含最小值
+        }
+
+        console.log(getRandom(1,10));
+        //5.随机点名
+        var arr = ['lzc','cp','ldh','xtf'];
+        console.log(arr[getRandom(0,arr.length-1)]);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
