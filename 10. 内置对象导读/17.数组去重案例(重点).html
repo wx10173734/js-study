@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var arr = ['c', 'a', 'z', 'a', 'x', 'a', 'x', 'c', 'b'];
+        //封装一个去重的函数 unique 独一无二的
+        function unique(arr) {
+            var newArr = [];
+            for (var i = 0; i < arr.length; i++) {
+                if (newArr.indexOf(arr[i]) === -1){
+                    newArr.push(arr[i]);
+                }
+            }
+            return newArr;
+        }
+        var demo = unique(arr);
+        console.log(demo);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

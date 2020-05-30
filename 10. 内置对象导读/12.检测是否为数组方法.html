@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //翻转数组
+        function reserve(arr) {
+            // if (arr instanceof Array){
+            if (Array.isArray(arr)){
+                var newArr = [];
+
+                for (var i = arr.length-1;i>=0;i--){
+                    newArr[newArr.length] = arr[i];
+                }
+                return newArr;
+            }else {
+                return '这个要求必须是数组格式 [1,2,3]'
+            }
+
+        }
+
+        console.log(reserve([1,2,3]));
+        console.log(reserve(1,2,3));
+        //检测是否为数组
+        //(1)instanceof 运算符 用来检测是否为数组
+        var arr = [];
+        var obj = {};
+        console.log(arr instanceof Array);
+        console.log(obj instanceof Array);
+        //(2) Array.isArray(参数); H5新增的方法 ie9以上版本支持
+        console.log(Array.isArray(arr));
+        console.log(Array.isArray(obj));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

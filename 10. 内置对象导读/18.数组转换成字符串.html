@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //数组转换成字符串
+        //1.toString()将我们的数组转换为字符串
+        var arr = [1,2,3];
+        console.log(arr.toString());//1,2,3
+        //2.join(分隔符)
+        var arr1 = ['green','blue','pink'];
+        console.log(arr1.join('|'));
+
+
+        //concat() 方法用于合并两个或多个数组。此方法不会更改现有数组，而是返回一个新数组。
+        var arr2 = arr.concat(arr1);
+        console.log(arr2);
+
+        //slice() 方法返回一个新的数组对象，这一对象是一个由 begin 和 end 决定
+        //的原数组的浅拷贝（包括 begin，不包括end）。原始数组不会被改变。
+        var arr3 = arr2.slice(-4,-1);
+        // console.log(arr3);
+
+        //splice() 方法通过删除或替换现有元素或者原地添加新的元素来修改数组
+        // ,并以数组形式返回被修改的内容。此方法会改变原数组。
+
+        arr2.splice(1,2,'lzc');
+        console.log(arr2);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

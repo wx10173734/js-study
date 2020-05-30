@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var str = 'oabcoefoxyozzopp';
+        var index = str.indexOf('o');
+        // console.log(indestx);
+        var num = 0;
+        while (index !== -1) {
+            console.log(index);
+            num++;
+            index = str.indexOf('o', index + 1);
+        }
+        console.log('num' + num + '次');
+
+        //课后作业 ['red',blue','red','green','pink','red'] 求red出现的位置和次数
+        var str1 = ['red', 'blue', 'red', 'green', 'pink', 'red'];
+        var index1 = str1.indexOf('red');
+        // console.log(index1);
+        var num1 = 0;
+        while (index1 !== -1) {
+            console.log(index1);
+            num1++;
+            index1 = str1.indexOf('red',index1+1);
+        }
+        console.log('num' + num1 + '次');
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
