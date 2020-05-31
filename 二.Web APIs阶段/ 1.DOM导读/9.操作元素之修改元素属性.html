@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button id="ldh">刘德华</button>
+    <button id="lyf">刘亦菲</button>
+    <img src="img/ldh.jpg" alt="" title="刘德华">
+
+    <script>
+        //修改元素属性 src
+        //1.获取元素
+        var ldh = document.getElementById('ldh');
+        var lyf = document.getElementById('lyf');
+        var img = document.querySelector('img');
+        //2.注册事件 处理程序
+        lyf.onclick = function () {
+            img.src = 'img/lyf.jpg';
+            img.title = '刘亦菲';
+        }
+        ldh.onclick = function () {
+            img.src = 'img/ldh.jpg';
+            img.title = '刘德华';
+        }
+    </script>
+</body>
+</html>

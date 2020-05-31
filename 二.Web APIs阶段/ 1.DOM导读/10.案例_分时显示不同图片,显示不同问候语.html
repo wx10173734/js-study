@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img{
+            width: 300px;
+
+        }
+    </style>
+</head>
+<body>
+    <img src="img/mor.jpg" alt="">
+    <div>上午好</div>
+    <script>
+        //1.获取元素
+        var img = document.querySelector('img');
+        var div = document.querySelector('div');
+        //2.得到当前的小时数
+        var date = new Date();
+        var h = date.getHours();
+        console.log(h);
+        //3.判断小时数改变图片和文字信息
+        if (h < 12){
+            img.src = 'img/mor.jpg';
+            div.innerHTML = '上午好';
+        }else if (h < 18){
+            img.src = 'img/noon.jpg';
+            div.innerHTML = '下午好';
+        }else {
+            img.src = 'img/eve.jpg';
+            div.innerHTML = '晚上好';
+        }
+    </script>
+</body>
+</html>
