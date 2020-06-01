@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background: url("img/2.JPG") no-repeat center top;
+        }
+        .imgbox{
+            width: 500px;
+            height: 60px;
+            margin: 100px auto;
+        }
+        .imgbox img{
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="imgbox">
+        <img src="img/2.JPG" alt="">
+        <img src="img/3.JPG" alt="">
+        <img src="img/4.JPG" alt="">
+        <img src="img/5.JPG" alt="">
+    </div>
+
+    <script>
+        var img = document.querySelector('.imgbox').querySelectorAll('img');
+        // console.log(img);
+        for (var i = 0;i<img.length;i++){
+            img[i].onclick = function () {
+                //this.src就是点击图片的路径
+                // var path = this.src;
+                //把这个路径this.src 给body就可以
+                document.body.style.backgroundImage = 'url('+this.src+')'
+
+            }
+        }
+    </script>
+</body>
+</html>

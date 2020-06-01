@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .box {
+            width: 250px;
+            margin: 100px auto;
+        }
+
+        .box li {
+            float: left;
+            width: 24px;
+            height: 24px;
+            background-color: pink;
+            margin: 15px;
+            background: url("img/sprite.png") no-repeat;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<script>
+    var lis = document.querySelectorAll('li');//所有的li
+    for (var i = 0; i < lis.length; i++) {
+        //让索引号 乘以 44 就是每个li 的背景y坐标
+        var index = i * 44;
+        lis[i].style.backgroundPosition = '0 -' + index + 'px';
+    }
+</script>
+</body>
+</html>

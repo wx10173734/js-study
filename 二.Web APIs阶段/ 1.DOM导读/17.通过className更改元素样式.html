@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+        .change{
+            background-color: purple;
+            color: #fff;
+            font-size: 25px;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="first">文本</div>
+    <script>
+        //1.使用elememt.style获得修改元素样式 如果样式比较少 或者功能简单情况用这个
+        var test = document.querySelector('div');
+        test.onclick = function () {
+            this.style.backgroundColor = 'purple';
+            //让我们当前元素的类名改为了 change
+
+            //2.可以通过修改 元素的className 更改元素的样式 适合于样式较多或者功能复杂的情况
+            //3.如果想要保留原先的类名 可以 多类名选择器
+            // this.className = 'change';
+            this.className = 'first change';
+        }
+    </script>
+</body>
+</html>
