@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>我是div</div>
+<span>我是span</span>
+<ul>
+    <li>我是li</li>
+    <li>我是li</li>
+    <li>我是li</li>
+    <li>我是li</li>
+</ul>
+<ol>
+    <li>我是li</li>
+    <li>我是li</li>
+    <li>我是li</li>
+    <li>我是li</li>
+</ol>
+<div class="demo">
+    <div class="box">
+        <span class="erweima">x</span>
+    </div>
+</div>
+<script>
+    //1.子节点 childNodes 所有的子节点 包含 元素节点 文本节点等
+    var ul = document.querySelector('ul');
+    console.log(ul.childNodes);
+    console.log(ul.childNodes[0].nodeType);
+    console.log(ul.childNodes[1].nodeType);
+    //2.children 获取所有的元素节点 也是实际开发常用的
+    console.log(ul.children);
+</script>
+</body>
+</html>

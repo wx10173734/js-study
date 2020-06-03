@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <style>
+        table {
+            width: 600px;
+            cursor: pointer;
+        }
+
+        table td {
+            text-align: center;
+        }
+
+        table th {
+            background-color: blueviolet;
+        }
+
+        table tr {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+<div id="dv">
+    请输入姓名:
+    <input type="text" value="" id="uname"/>
+    <br/> 请输入邮箱:
+    <input type="text" value="" id="email"/>
+</div>
+
+<input type="button" value="添加" id="btn"/>
+<table border="1" cellpadding="0" cellspacing="0" id="tb">
+    <thead>
+    <tr>
+        <th>姓名</th>
+        <th>邮箱</th>
+    </tr>
+    </thead>
+    <tbody id="tbd">
+    <tr>
+        <td>小黑</td>
+        <td>xiaohei@126.com</td>
+    </tr>
+    </tbody>
+</table>
+<script>
+    var uname = document.querySelector('#uname');
+    var email = document.querySelector('#email');
+    var btn = document.querySelector('#btn');
+    var tbody = document.querySelector('#tbd');
+    // console.log(tr);
+    btn.onclick = function () {
+        var nameConteng = uname.value;
+        var emailConteng = email.value;
+        console.log(nameConteng);
+        console.log(emailConteng);
+        if (nameConteng && emailConteng == '') {
+            alert('输入信息为空');
+        } else {
+            var tr = document.createElement('tr');
+            tbody.appendChild(tr);
+            var td1 = document.createElement('td');
+            var td2 = document.createElement('td');
+            td1.innerHTML = nameConteng;
+            td2.innerHTML = emailConteng;
+            tr.insertBefore(td1, tr.children[0]);
+            tr.insertBefore(td2, tr.children[0]);
+        }
+    }
+</script>
+
+</body>
+
+</html>
