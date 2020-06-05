@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button class="begin">开启定时器</button>
+<button class="stop">停止定时器</button>
+<script>
+    var begin = document.querySelector('.begin');
+    var stop = document.querySelector('.stop');
+    var timer = null;//全局变量 null是一个空对象
+    begin.addEventListener('click', function () {
+        timer = setInterval(callback, 1000);
+    });
+
+    function callback() {
+        console.log('开始')
+    }
+    stop.addEventListener('click', function () {
+        clearInterval(timer);
+    })
+</script>
+</body>
+</html>
