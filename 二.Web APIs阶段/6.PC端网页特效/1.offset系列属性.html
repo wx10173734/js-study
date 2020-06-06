@@ -9,7 +9,7 @@
             padding: 0;
         }
         .father{
-            position: relative;
+            /*position: relative;*/
             width: 200px;
             height: 200px;
             background-color: pink;
@@ -21,21 +21,37 @@
             background-color: purple;
             margin-left: 45px;
         }
+        .w{
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            margin: 0 auto 200px;
+            padding: 10px;
+            border: 10px solid red;
+        }
     </style>
 </head>
 <body>
     <div class="father">
         <div class="son"></div>
     </div>
+    <div class="w"></div>
     <script>
         //offset系列
         var father = document.querySelector('.father');
         var son = document.querySelector('.son');
-        //可以得到元素的偏移 位置 返回的不带单位的数值
+        //1.可以得到元素的偏移 位置 返回的不带单位的数值
         console.log(father.offsetTop);
         console.log(father.offsetLeft);
         //它以带有定位的父亲为准,如果没有父亲或者父亲没有定位 则以父亲为准
         console.log(son.offsetLeft);
+        //2.可以得到元素的大小宽度高度 是包含padding + border + width
+        var w = document.querySelector('.w');
+        console.log(w.offsetWidth);
+        console.log(w.offsetHeight);
+        //3.返回带有定位的父亲,否则返回的是body
+        console.log(son.offsetParent);//返回带有定位的父亲,否则返回的是body
+        console.log(son.parentNode);//返回的是最近一级的父亲,不管父亲有没有定位
     </script>
 </body>
 </html>
