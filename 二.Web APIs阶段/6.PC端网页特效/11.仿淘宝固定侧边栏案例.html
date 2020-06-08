@@ -53,8 +53,13 @@
     //1.获取元素
     var sliderbar = document.querySelector('.slider-bar');
     var banner = document.querySelector('.banner');
+    var main = document.querySelector('.main');
+    var goBack = document.querySelector('.goBack');
     //banner.offsetTop被卷去头部的大小 一定要写在滚动的外面
     var bannerTop = banner.offsetTop;
+    //当我们侧边栏固定定位之后应该变化的数值
+    var sliderbarTop = sliderbar.offsetTop - bannerTop;
+    var mainTop = main.offsetTop;
     console.log(bannerTop);
     //2.页面滚动事件 scroll
     document.addEventListener('scroll',function () {
@@ -63,8 +68,16 @@
         //3.当我们页面被卷去的头部大于等于了172此时,侧边栏就要改为固定定位
         if (window.pageYOffset >= bannerTop){
             sliderbar.style.position = 'fixed';
+            sliderbar.style.top = sliderbarTop + 'px';
         }else{
             sliderbar.style.position = 'absolute';
+            sliderbar.style.top =  '300px';
+        }
+        //4.当页面滚到到main盒子,就显示goBacK模块
+        if (window.pageYOffset >= mainTop){
+            goBack.style.display = 'block';
+        }else {
+            goBack.style.display = 'none';
         }
     })
 </script>
