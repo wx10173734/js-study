@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            position: absolute;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<script>
+    function animate(obj, target) {
+        clearInterval(obj.timer);
+        obj.timer = setInterval(function () {
+            var step = (target - obj.offsetLeft) / 10;
+            if (obj.offsetLeft == target) {
+                clearInterval(obj.timer)
+            }
+            obj.style.left = obj.offsetLeft + step + 'px';
+        }, 15)
+    }
+    var div = document.querySelector('div');
+
+    animate(div, 900);
+
+</script>
+</body>
+</html>
