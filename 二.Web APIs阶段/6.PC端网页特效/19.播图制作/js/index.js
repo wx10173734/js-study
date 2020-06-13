@@ -55,50 +55,62 @@ window.addEventListener('load', function () {
     //6.克隆第一张图片li放到ul最后面
     var first = ul.children[0].cloneNode(true);
     ul.appendChild(first);
-    // var last = ul.children[ul.children-1].cloneNode(true);
-    // ul.insertBefore(last,null);
+
+
     //7.点击右侧按钮 图片滚动1张
     var num = 0;
     //circle控制小圆圈的播放
     var circle = 0;
+    //flag节流阀
+    var flag = true;
     //右侧按钮实现
     arrow_r.addEventListener('click', function () {
-        //如果走到了最后复制的一张图片,此时我们的ul要快速复原left改为0
-        console.log(num);
-        if (num == ul.children.length - 1) {
-            ul.style.left = '0';
-            num = 0;
-        }
-        num++;
-        animate(ul, -num * focusWidth);
+       if (flag){
+           flag = false;//关闭节流阀
+           //如果走到了最后复制的一张图片,此时我们的ul要快速复原left改为0
+           console.log(num);
+           if (num == ul.children.length - 1) {
+               ul.style.left = '0';
+               num = 0;
+           }
+           num++;
+           animate(ul, -num * focusWidth,function () {
+                flag = true;//打开节流阀
+           });
 
-        circle++;
-        //如果circle == 4说明走到最后我们的克隆的这张图片了 我们就复原
-        if (circle == ol.children.length) {
-            circle = 0;
-        }
-        //调用函数
-        circleChange();
+           circle++;
+           //如果circle == 4说明走到最后我们的克隆的这张图片了 我们就复原
+           if (circle == ol.children.length) {
+               circle = 0;
+           }
+           //调用函数
+           circleChange();
+       }
     });
     //9.左侧按钮做法
     arrow_l.addEventListener('click', function () {
-        //如果走到了最后复制的一张图片,此时我们的ul要快速复原left改为0
-        console.log(num);
-        if (num == 0) {
-            num = ul.children.length - 1;
-            ul.style.left = -num * focusWidth + 'px';
+      if (flag){
+          flag = false;
+          //如果走到了最后复制的一张图片,此时我们的ul要快速复原left改为0
+          console.log(num);
+          if (num == 0) {
+              num = ul.children.length - 1;
+              ul.style.left = -num * focusWidth + 'px';
 
-        }
-        num--;
-        animate(ul, -num * focusWidth);
-        circle--;
-        //如果circle < 0 说明第一张图片,则小圆圈改为第四个小圆圈(3)
-        if (circle < 0) {
-            circle = ol.children.length - 1;
-        }
-        // circle = circle < 0 ? ol.children.length - 1 : circle;
-        //调用函数
-        circleChange();
+          }
+          num--;
+          animate(ul, -num * focusWidth,function () {
+                flag = true;
+          });
+          circle--;
+          //如果circle < 0 说明第一张图片,则小圆圈改为第四个小圆圈(3)
+          if (circle < 0) {
+              circle = ol.children.length - 1;
+          }
+          // circle = circle < 0 ? ol.children.length - 1 : circle;
+          //调用函数
+          circleChange();
+      }
     });
     function circleChange() {
         //先清除其余小圆圈的current类名

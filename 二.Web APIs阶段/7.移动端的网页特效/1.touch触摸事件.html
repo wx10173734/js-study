@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<script>
+    var div = document.querySelector('div');
+    //手指触摸
+    div.addEventListener('touchstart',function () {
+        console.log('我摸了你');
+    })
+    //手指移动
+    div.addEventListener('touchmove',function () {
+        console.log('我继续摸你');
+    })
+    //手指离开
+    div.addEventListener('touchend',function () {
+        console.log('不摸了');
+    })
+</script>
+</body>
+</html>

@@ -13,10 +13,11 @@ function animate(obj, target, callback) {
             //停止动画 本质是停止定时器
             clearInterval(obj.timer);
             //回调函数写到定时器结束里面
-            if (callback){
-                //回调函数写到定时器结束里面
-                callback();
-            }
+            // if (callback){
+            //     //回调函数写到定时器结束里面
+            //     callback();
+            // }
+            callback && callback();
         }
         obj.style.left = obj.offsetLeft + step + 'px';
     }, 15)
