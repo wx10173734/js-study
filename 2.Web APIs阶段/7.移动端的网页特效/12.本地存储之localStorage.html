@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text">
+<button class="set">存储数据</button>
+<button class="get">获取数据</button>
+<button class="remove">删除数据</button>
+<button class="del">清空所有数据</button>
+<script>
+    var ipt = document.querySelector('input');
+    var set = document.querySelector('.set');
+    var get = document.querySelector('.get');
+    var remove = document.querySelector('.remove');
+    var del = document.querySelector('.del');
+    set.addEventListener('click', function () {
+        //当我们点击了之后,可以把表单里面的值储存起来
+        var val = ipt.value;
+        localStorage.setItem('username', val);
+    });
+    get.addEventListener('click', function () {
+        //当我们点击了之后,可以把表单里面的值获取起来
+        console.log(localStorage.getItem('username'));
+    });
+    remove.addEventListener('click', function () {
+        //当我们点击了之后,可以把表单里面的值删除
+        localStorage.removeItem('username');
+    });
+    del.addEventListener('click', function () {
+        //当我们点击了之后,可以把表单里面的值全部删除
+        localStorage.clear();
+    });
+</script>
+</body>
+</html>
