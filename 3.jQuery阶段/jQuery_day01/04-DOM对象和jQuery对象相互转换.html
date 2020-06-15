@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+<video src="mov.mp4" muted></video>
+<script>
+    //1.DOM对象转换为jq对象
+    //(1)直接获取视频得到的就是jq对象
+    $('video');
+    //(2)我们已经使用原生js 获取过来DOM对象
+    var myvideo = document.querySelector('video');
+    //$(myvideo).play(); //jq里面没有play这个方法
+
+    //2.jq对象转换为DOM对象
+    // myvideo.play();
+    $('video')[0].play();
+    $('video').get(0).play();
+</script>
+</body>
+</html>
